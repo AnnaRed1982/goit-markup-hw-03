@@ -1,0 +1,228 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+:root {
+  --white: #ffffff;
+  --blueactive: #188ce8;
+  --blue: #2196f3;
+  --black: #000000;
+  --accentblack: #212121;
+  --greytext: #757575;
+  --greytext-footer: rgba(255, 255, 255, 0.6);
+  --darkgrey: #2f303a;
+  --shadow: rgba(0, 0, 0, 0.15);
+  --teamback: #f5f4fa;
+  --progback: #eeeeee;
+  --portfborder: #eeeeee;
+  --teamshadow1: rgba(0, 0, 0, 0.12);
+  --teamshadow2: rgba(0, 0, 0, 0.14);
+  --teamshadow3: rgba(0, 0, 0, 0.2);
+  --boxshadow1: rgba(0, 0, 0, 0.1);
+  --boxshadow2: rgba(0, 0, 0, 0.08);
+  --boxshadow3: rgba(0, 0, 0, 0.12);
+}
+.list {
+  list-style: none;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--greytext);
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/*HEADER*/
+.logo {
+  text-decoration: none;
+  color: var(--blue);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.logo-black {
+  color: var(--black);
+}
+.logo-white {
+  color: var(--white);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--accentblack);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.nav-link:hover,
+.nav-link:focus,
+.nav-site .nav-link.current {
+  color: var(--blue);
+}
+
+.header-contact {
+  color: var(--greytext);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--blue);
+}
+
+/* MAIN */
+.hero {
+  background-color: var(--darkgrey);
+}
+.hero-title {
+  color: var(--white);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.button {
+  font-family: inherit;
+  background-color: var(--blue);
+  color: var(--white);
+  width: 216px;
+  height: 50px;
+  left: 692px;
+  top: 430px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.19;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+.button:hover,
+.button:focus {
+  font-family: inherit;
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px var(--shadow);
+}
+/* Advant */
+.adv-title {
+  color: var(--accentblack);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+/* WORK */
+.work-title,
+.team-title {
+  color: var(--accentblack);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+/* TEAM */
+.team {
+  background-color: var(--teamback);
+}
+/* .team-title {
+  color: var(--accentblack);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+} */
+
+.team-item {
+  background-color: var(--white);
+  box-shadow: 0px 1px 3px var(--teamshadow1), 0px 1px 1px var(--teamshadow2),
+    0px 2px 1px var(--teamshadow3);
+}
+
+.team-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--accentblack);
+}
+.team-text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--darkgrey);
+}
+.adress-city {
+  text-decoration: none;
+  color: var(--white);
+  font-style: normal;
+}
+.adress-contact {
+  text-decoration: none;
+  color: var(--greytext-footer);
+  font-style: normal;
+}
+.adress-city:hover,
+.adress-city:focus,
+.adress-contact:hover,
+.adress-contact:focus {
+  color: var(--blueactive);
+}
+
+/* //////////////////////////// */
+/* PORTFOLIO */
+
+.filter-button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--accentblack);
+  background-color: var(--teamback);
+
+  cursor: pointer;
+}
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--white);
+  background: var(--blue);
+  box-shadow: 0px 3px 1px var(--boxshadow1), 0px 1px 2px var(--boxshadow2),
+    0px 2px 2px var(--boxshadow3);
+}
+.portf-progect {
+  border: 1px solid var(--portfborder);
+}
+.portf-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--accentblack);
+}
+.portf-text {
+  font-size: 16px;
+  line-height: 1.9;
+}
