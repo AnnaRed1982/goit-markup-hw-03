@@ -29,6 +29,8 @@
   --boxshadow1: rgba(0, 0, 0, 0.1);
   --boxshadow2: rgba(0, 0, 0, 0.08);
   --boxshadow3: rgba(0, 0, 0, 0.12);
+  /* lines */
+  --hederline: #ececec;
 }
 
 body {
@@ -39,6 +41,12 @@ body {
   font-size: 14px;
   line-height: 1.7;
   font-weight: 400;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto; /*auto - marg left rig 8 px */
 }
 
 /*RESET*/
@@ -55,11 +63,13 @@ p {
 img {
   display: block;
 }
+/* сброс настроек списка */
 .list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+/* сброс настроек ссылок */
 .link {
   text-decoration: none;
   color: currentColor;
@@ -67,15 +77,20 @@ img {
 
 /*HEADER*/
 .header-page {
-  background-color: tomato;
+  /* background-color: tomato; */
+  border-bottom: 1px solid var(--hederline);
 }
 .logo {
+  display: inline-block;
   text-decoration: none;
   color: var(--blue);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+
+  margin-top: 24px;
+  margin-bottom: 25px;
 }
 .logo-black {
   color: var(--black);
@@ -112,32 +127,44 @@ img {
 /* MAIN */
 .hero {
   background-color: var(--darkgrey);
+  text-align: center;
+  margin-bottom: 94px;
 }
 .hero-title {
   color: var(--white);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
+  /* text-align: center; */
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  margin-bottom: 30px;
 }
 .button {
   font-family: inherit;
+
+  display: inline-block;
+  min-width: 216px;
+  padding: 10px 32px;
+
   background-color: var(--blue);
   color: var(--white);
-  width: 216px;
-  height: 50px;
-  left: 692px;
-  top: 430px;
+
   cursor: pointer;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.19;
-  display: flex;
+
+  /* display: flex; */
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
+
   letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  border-color: transparent;
 }
 .button:hover,
 .button:focus {
@@ -146,15 +173,25 @@ img {
   box-shadow: 0px 4px 4px var(--shadow);
 }
 /* Advant */
+.adv {
+  background-color: tomato;
+  margin-bottom: 94px;
+}
 .adv-title {
   color: var(--accentblack);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
 
 /* WORK */
+.work {
+  background-color: blue;
+  margin-bottom: 94px;
+}
 .work-title,
 .team-title {
   color: var(--accentblack);
@@ -162,31 +199,29 @@ img {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+
+  margin-bottom: 50px;
 }
 /* TEAM */
 .team {
   background-color: var(--teamback);
 }
-/* .team-title {
-  color: var(--accentblack);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-} */
 
 .team-item {
   background-color: var(--white);
   box-shadow: 0px 1px 3px var(--teamshadow1), 0px 1px 1px var(--teamshadow2),
     0px 2px 1px var(--teamshadow3);
 }
-
+.team-img {
+  margin-bottom: 30px;
+}
 .team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   color: var(--accentblack);
+  margin-bottom: 10px;
 }
 .team-text {
   font-size: 16px;
@@ -195,8 +230,13 @@ img {
 }
 
 /* FOOTER */
-footer {
+.footer-page {
   background-color: var(--darkgrey);
+  border-top: 1px solid var(--hederline);
+}
+.f {
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 .adress-city {
   text-decoration: none;
@@ -207,6 +247,8 @@ footer {
   text-decoration: none;
   color: var(--greytext-footer);
   font-style: normal;
+
+  margin-top: 9px;
 }
 .adress-city:hover,
 .adress-city:focus,
@@ -228,6 +270,17 @@ footer {
   background-color: var(--teamback);
 
   cursor: pointer;
+
+  display: inline-block;
+  min-width: 125px;
+  padding: 6px 22px;
+
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+
+  border-radius: 4px;
+  border-color: transparent;
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -239,12 +292,17 @@ footer {
 .portf-progect {
   border: 1px solid var(--portfborder);
 }
+.portf-img {
+  margin-bottom: 20px;
+}
 .portf-name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--accentblack);
+
+  margin-bottom: 4px;
 }
 .portf-text {
   font-size: 16px;
