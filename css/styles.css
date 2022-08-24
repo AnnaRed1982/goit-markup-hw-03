@@ -128,7 +128,6 @@ img {
 .hero {
   background-color: var(--darkgrey);
   text-align: center;
-  margin-bottom: 94px;
 }
 .hero-title {
   color: var(--white);
@@ -175,7 +174,6 @@ img {
 /* Advant */
 .adv {
   background-color: tomato;
-  margin-bottom: 94px;
 }
 .adv-title {
   color: var(--accentblack);
@@ -190,7 +188,6 @@ img {
 /* WORK */
 .work {
   background-color: blue;
-  margin-bottom: 94px;
 }
 .work-title,
 .team-title {
