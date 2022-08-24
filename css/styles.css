@@ -30,9 +30,6 @@
   --boxshadow2: rgba(0, 0, 0, 0.08);
   --boxshadow3: rgba(0, 0, 0, 0.12);
 }
-.list {
-  list-style: none;
-}
 
 body {
   background-color: var(--white);
@@ -44,7 +41,34 @@ body {
   font-weight: 400;
 }
 
+/*RESET*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+/* отсутствие отступов после картнок */
+img {
+  display: block;
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
 /*HEADER*/
+.header-page {
+  background-color: tomato;
+}
 .logo {
   text-decoration: none;
   color: var(--blue);
@@ -69,7 +93,7 @@ body {
 }
 .nav-link:hover,
 .nav-link:focus,
-.nav-site .nav-link.current {
+.nav-link.current {
   color: var(--blue);
 }
 
