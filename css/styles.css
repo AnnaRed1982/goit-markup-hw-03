@@ -38,6 +38,10 @@
 
   /* btn radius */
   --btnradius: 4px;
+
+  /* flex */
+  --items: 3;
+  --indent: 30px;
 }
 
 body {
@@ -98,12 +102,12 @@ img {
   /* background-color: tomato; */
   border-bottom: 1px solid var(--hederline);
 }
+
 .logo {
   display: inline-block;
 
   margin-right: 93px;
 
-  text-decoration: none;
   color: var(--blue);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -116,7 +120,9 @@ img {
 .logo-white {
   color: var(--white);
 }
-
+.nav-site {
+  display: flex;
+}
 .nav-link {
   text-decoration: none;
   color: var(--accentblack);
@@ -136,6 +142,8 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  display: flex;
 }
 .header-contact:hover,
 .header-contact:focus {
@@ -144,6 +152,9 @@ img {
 
 /* MAIN */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--darkgrey);
   text-align: center;
 }
@@ -152,19 +163,24 @@ img {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  /* text-align: center; */
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
 
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 696px;
+  height: 120px;
 }
 .button {
   font-family: inherit;
 
   display: inline-block;
-  width: 216px;
+  min-width: 216px;
   min-height: 50px;
-  padding: 8px 28px; /*32-2*2 ширина бордера*/
+  padding: 10px 32px; /*32-2*2 ширина бордера*/
 
   background-color: var(--blue);
   color: var(--white);
@@ -173,14 +189,14 @@ img {
 
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.19;
+  line-height: calc(30 / 16);
 
   align-items: center;
 
   letter-spacing: 0.06em;
 
   border-radius: var(--btnradius);
-  border-color: transparent;
+  border: none;
 }
 .button:hover,
 .button:focus {
@@ -189,7 +205,9 @@ img {
   box-shadow: 0px 4px 4px var(--shadow);
 }
 /* Advant */
-
+.adv-comp {
+  display: flex;
+}
 .adv-title {
   color: var(--accentblack);
   font-weight: 700;
@@ -225,25 +243,28 @@ img {
   background-color: var(--white);
   box-shadow: 0px 1px 3px var(--teamshadow1), 0px 1px 1px var(--teamshadow2),
     0px 2px 1px var(--teamshadow3);
+
+  text-align: center;
+
+  padding-bottom: 30px;
 }
 .team-img {
   margin-bottom: 30px;
 }
-.team-group {
+/* .team-group {
   padding: 30px auto;
-}
+} */
 .team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
+
   color: var(--accentblack);
   margin-bottom: 10px;
 }
 .team-text {
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 }
 
 /* FOOTER */
@@ -277,6 +298,9 @@ img {
 /* //////////////////////////// */
 /* PORTFOLIO */
 
+.filter {
+  margin-bottom: 34px;
+}
 .filter-button {
   font-family: inherit;
   font-weight: 500;
@@ -293,11 +317,8 @@ img {
   height: 38px;
   padding: 6px 22px;
 
-  align-items: center;
-  text-align: center;
-
   border-radius: var(--btnradius);
-  border-color: transparent;
+  border: none;
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -306,7 +327,15 @@ img {
   box-shadow: 0px 3px 1px var(--boxshadow1), 0px 1px 2px var(--boxshadow2),
     0px 2px 2px var(--boxshadow3);
 }
+.portf-cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* text-align: center; */
+}
 .portf-progect {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+
   border-bottom: 1px solid var(--portfborder);
 }
 .portf-img {
