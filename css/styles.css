@@ -18,19 +18,26 @@
   --accentblack: #212121;
   --greytext: #757575;
   --greytext-footer: rgba(255, 255, 255, 0.6);
+
+  /* BACKGROUND */
   --darkgrey: #2f303a;
-  --shadow: rgba(0, 0, 0, 0.15);
   --teamback: #f5f4fa;
-  --progback: #eeeeee;
-  --portfborder: #eeeeee;
+
+  /* shadow */
+  --shadow: rgba(0, 0, 0, 0.15);
   --teamshadow1: rgba(0, 0, 0, 0.12);
   --teamshadow2: rgba(0, 0, 0, 0.14);
   --teamshadow3: rgba(0, 0, 0, 0.2);
   --boxshadow1: rgba(0, 0, 0, 0.1);
   --boxshadow2: rgba(0, 0, 0, 0.08);
   --boxshadow3: rgba(0, 0, 0, 0.12);
+
   /* lines */
+  --portfborder: #eeeeee;
   --hederline: #ececec;
+
+  /* btn radius */
+  --btnradius: 4px;
 }
 
 body {
@@ -42,13 +49,20 @@ body {
   line-height: 1.7;
   font-weight: 400;
 }
+section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  outline: 1px solid blue;
+}
 .container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid tomato;
+
+  outline: 1px solid tomato;
 }
 
 /*RESET*/
@@ -64,6 +78,8 @@ p {
 /* отсутствие отступов после картнок */
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 /* сброс настроек списка */
 .list {
@@ -84,6 +100,9 @@ img {
 }
 .logo {
   display: inline-block;
+
+  margin-right: 93px;
+
   text-decoration: none;
   color: var(--blue);
   font-family: 'Raleway', sans-serif;
@@ -143,8 +162,9 @@ img {
   font-family: inherit;
 
   display: inline-block;
-  min-width: 216px;
-  padding: 10px 32px;
+  width: 216px;
+  min-height: 50px;
+  padding: 8px 28px; /*32-2*2 ширина бордера*/
 
   background-color: var(--blue);
   color: var(--white);
@@ -155,13 +175,11 @@ img {
   font-size: 16px;
   line-height: 1.19;
 
-  /* display: flex; */
   align-items: center;
-  /* text-align: center; */
 
   letter-spacing: 0.06em;
 
-  border-radius: 4px;
+  border-radius: var(--btnradius);
   border-color: transparent;
 }
 .button:hover,
@@ -171,23 +189,23 @@ img {
   box-shadow: 0px 4px 4px var(--shadow);
 }
 /* Advant */
-.adv {
-  background-color: yellow;
-}
+
 .adv-title {
   color: var(--accentblack);
   font-weight: 700;
+
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 
   margin-bottom: 10px;
 }
+.adv-text {
+  width: 270px;
+}
 
 /* WORK */
-.work {
-  background-color: blue;
-}
+
 .work-title,
 .team-title {
   color: var(--accentblack);
@@ -211,6 +229,9 @@ img {
 .team-img {
   margin-bottom: 30px;
 }
+.team-group {
+  padding: 30px auto;
+}
 .team-name {
   font-weight: 500;
   font-size: 16px;
@@ -228,18 +249,23 @@ img {
 /* FOOTER */
 .footer-page {
   background-color: var(--darkgrey);
-  border-top: 1px solid var(--hederline);
+  padding: 60px 0;
+}
+.f {
+  margin-bottom: 20px;
 }
 
 .adress-city {
   text-decoration: none;
   color: var(--white);
   font-style: normal;
+  /* margin-bottom: 9px; */
 }
 .adress-contact {
   text-decoration: none;
   color: var(--greytext-footer);
   font-style: normal;
+  margin-top: 9px; /*????*/
 }
 .adress-city:hover,
 .adress-city:focus,
@@ -255,7 +281,7 @@ img {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: calc(26 / 16);
   text-align: center;
   color: var(--accentblack);
   background-color: var(--teamback);
@@ -263,14 +289,14 @@ img {
   cursor: pointer;
 
   display: inline-block;
-  min-width: 125px;
+  min-width: 73px;
+  height: 38px;
   padding: 6px 22px;
 
-  /* display: flex; */
   align-items: center;
   text-align: center;
 
-  border-radius: 4px;
+  border-radius: var(--btnradius);
   border-color: transparent;
 }
 .filter-button:hover,
@@ -281,7 +307,7 @@ img {
     0px 2px 2px var(--boxshadow3);
 }
 .portf-progect {
-  border: 1px solid var(--portfborder);
+  border-bottom: 1px solid var(--portfborder);
 }
 .portf-img {
   margin-bottom: 20px;
