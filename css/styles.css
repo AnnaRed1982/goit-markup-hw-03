@@ -83,12 +83,12 @@ body {
   line-height: 1.7;
   font-weight: 400;
 }
-section {
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
 
-  outline: 1px solid blue;
-  outline-offset: -1px;
+  /* outline: 1px solid blue;
+  outline-offset: -1px; */
 }
 .container {
   width: 1200px;
@@ -96,8 +96,8 @@ section {
   padding-right: 15px;
   margin: 0 auto;
 
-  outline: 1px solid tomato;
-  outline-offset: -1px;
+  /* outline: 1px solid tomato;
+  outline-offset: -1px; */
 }
 
 /*HEADER*/
@@ -105,7 +105,6 @@ section {
   border-bottom: 1px solid var(--hederline);
 }
 .header-container {
-  align-items: center;
   display: flex;
   align-items: center;
 }
@@ -119,7 +118,7 @@ section {
 
   margin-right: 93px;
 
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
 }
 .logo-black {
   color: var(--black);
@@ -148,7 +147,7 @@ nav {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
 }
 .nav-link:hover,
 .nav-link:focus,
@@ -164,10 +163,9 @@ nav {
   letter-spacing: 0.02em;
 
   display: flex;
-  align-items: center;
   gap: 50px;
 
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
 }
 .header-contact:hover,
 .header-contact:focus {
@@ -317,7 +315,7 @@ nav {
   margin-bottom: 20px;
   margin-right: 0;
 
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
   display: block;
 }
 .adress-item:not(:last-child) {
@@ -328,15 +326,14 @@ nav {
   color: var(--white);
   font-style: normal;
 
-  background-color: greenyellow;
-  display: block;
+  /* background-color: greenyellow; */
 }
 .adress-contact {
   text-decoration: none;
   color: var(--greytext-footer);
   font-style: normal;
 
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
   display: block;
 }
 
@@ -352,7 +349,12 @@ nav {
 
 .filter {
   margin-bottom: 34px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
 }
+
 .filter-button {
   font-family: inherit;
   font-weight: 500;
@@ -364,13 +366,12 @@ nav {
 
   cursor: pointer;
 
-  display: inline-block;
   min-width: 73px;
   height: 38px;
   padding: 6px 22px;
 
   border-radius: var(--btnradius);
-  border: none;
+  border-color: transparent;
 }
 .filter-button:hover,
 .filter-button:focus {
