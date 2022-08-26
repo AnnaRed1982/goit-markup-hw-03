@@ -41,6 +41,8 @@
 
   /* flex */
   --items: 3;
+  --itemsteam: 4;
+  --itemsadv: 4;
   --indent: 30px;
 }
 
@@ -99,7 +101,6 @@ img {
 
 /*HEADER*/
 .header-page {
-  /* background-color: tomato; */
   border-bottom: 1px solid var(--hederline);
 }
 
@@ -207,6 +208,11 @@ img {
 /* Advant */
 .adv-comp {
   display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+.adv-item {
+  flex-basis: calc((100% - var(--indent) * (var(--itemsadv) - 1)) / var(--itemsadv));
 }
 .adv-title {
   color: var(--accentblack);
@@ -223,6 +229,14 @@ img {
 }
 
 /* WORK */
+.work-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+.work-img {
+  flex-basis: calc((100% - var(--indent) * (var(--itemsteam) - 1)) / var(--itemsteam));
+}
 
 .work-title,
 .team-title {
@@ -238,6 +252,11 @@ img {
 .team {
   background-color: var(--teamback);
 }
+.team-comp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
 
 .team-item {
   background-color: var(--white);
@@ -246,14 +265,13 @@ img {
 
   text-align: center;
 
+  flex-basis: calc((100% - var(--indent) * (var(--itemsteam) - 1)) / var(--itemsteam));
+}
+
+.team-group {
+  padding-top: 30px;
   padding-bottom: 30px;
 }
-.team-img {
-  margin-bottom: 30px;
-}
-/* .team-group {
-  padding: 30px auto;
-} */
 .team-name {
   font-weight: 500;
   font-size: 16px;
@@ -330,16 +348,16 @@ img {
 .portf-cont {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  /* text-align: center; */
+  gap: var(--indent);
 }
 .portf-progect {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 
   border-bottom: 1px solid var(--portfborder);
 }
-.portf-img {
-  margin-bottom: 20px;
+
+.portf-group {
+  padding: 20px 24px;
 }
 .portf-name {
   font-weight: 700;
