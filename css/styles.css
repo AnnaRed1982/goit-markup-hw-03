@@ -104,15 +104,22 @@ section {
 .header-page {
   border-bottom: 1px solid var(--hederline);
 }
+.header-container {
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
 
 .logo {
-  display: inline-block;
-
   color: var(--blue);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+
+  margin-right: 93px;
+
+  background-color: greenyellow;
 }
 .logo-black {
   color: var(--black);
@@ -120,15 +127,28 @@ section {
 .logo-white {
   color: var(--white);
 }
+nav {
+  display: flex;
+  margin-right: auto;
+  align-items: center;
+}
 .nav-site {
   display: flex;
+  align-items: center;
+  gap: 50px;
 }
+
 .nav-link {
-  text-decoration: none;
+  display: block;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--accentblack);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  background-color: greenyellow;
 }
 .nav-link:hover,
 .nav-link:focus,
@@ -138,12 +158,16 @@ section {
 
 .header-contact {
   color: var(--greytext);
-  text-decoration: none;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
   display: flex;
+  align-items: center;
+  gap: 50px;
+
+  background-color: greenyellow;
 }
 .header-contact:hover,
 .header-contact:focus {
@@ -291,6 +315,7 @@ section {
 }
 .f {
   margin-bottom: 20px;
+  margin-right: 0;
 
   background-color: greenyellow;
   display: block;
