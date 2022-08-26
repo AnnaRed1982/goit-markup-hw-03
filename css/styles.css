@@ -73,6 +73,7 @@ img {
   text-decoration: none;
   color: currentColor;
 }
+
 /* ************************************** */
 body {
   background-color: var(--white);
@@ -139,9 +140,9 @@ nav {
 
 .nav-link {
   display: block;
-  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+
   color: var(--accentblack);
   font-weight: 500;
   line-height: 1.14;
@@ -194,7 +195,7 @@ nav {
   margin-right: auto;
 
   width: 696px;
-  height: 120px;
+  min-height: 120px;
 }
 .button {
   font-family: inherit;
@@ -212,8 +213,6 @@ nav {
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
-
-  align-items: center;
 
   letter-spacing: 0.06em;
 
@@ -327,6 +326,7 @@ nav {
   font-style: normal;
 
   /* background-color: greenyellow; */
+  display: block;
 }
 .adress-contact {
   text-decoration: none;
