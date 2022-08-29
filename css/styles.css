@@ -390,13 +390,15 @@ nav {
 .portf-progect {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 
-  border: 1px solid var(--portfborder);
-  border-top: none;
+  
   
 }
 
 .portf-group {
   padding: 20px 24px;
+
+  border: 1px solid var(--portfborder);
+  border-top: none;
 }
 .portf-name {
   font-weight: 700;
